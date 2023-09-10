@@ -26,9 +26,6 @@ namespace AccountRegistration
             DelNumAge = new DelegateNumber(StudentInfoClass.GetAge);
             DelContactNo = new DelegateNumber(StudentInfoClass.GetContactNo);
             DelStudNo = new DelegateNumber(StudentInfoClass.GetStudentNo);
-
-
-
         }
 
         private void frmConfirm_Load(object sender, EventArgs e)
@@ -40,8 +37,7 @@ namespace AccountRegistration
             lblMiddlename.Text = DelMiddleName(StudentInfoClass.MiddleName);
             lblAge.Text = DelNumAge(StudentInfoClass.Age).ToString();
             lblContact.Text = DelContactNo(StudentInfoClass.ContactNo).ToString();
-            lblAddress.Text = DelAddress.ToString();
-            this.DialogResult = DialogResult.OK;
+            lblAddress.Text = DelAddress(StudentInfoClass.Address);
         }
 
         private void button1_Click(object sender, EventArgs e)

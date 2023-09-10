@@ -26,10 +26,10 @@ namespace AccountRegistration
             StudentInfoClass.MiddleName = txtMiddlename.Text.ToString();
             StudentInfoClass.Address = txtAddress.Text.ToString();
             StudentInfoClass.Program = comboProg.Text.ToString();
-            StudentInfoClass.Age = long.Parse(txtAge.Text.ToString());
+            StudentInfoClass.Age = long.Parse(txtAge.Text);
             StudentInfoClass.ContactNo = long.Parse(txtContact.Text.ToString());
             StudentInfoClass.StudentNo = long.Parse(txtStudNo.Text.ToString());
-            
+
             frmConfirm confirmForm = new frmConfirm();
             DialogResult result = confirmForm.ShowDialog();
 
@@ -43,7 +43,9 @@ namespace AccountRegistration
                 txtAge.Text = "";
                 txtContact.Text = "";
                 txtStudNo.Text = "";
-            };
+            }
+
+
 
         }
     }
